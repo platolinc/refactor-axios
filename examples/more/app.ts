@@ -85,13 +85,30 @@ import NProgress from 'nprogress'
 // })
 
 
-axios.post('/more/post', {
-  a: 1
-}, {
-  auth: {
-    username: 'lch',
-    password: '123456'
+// axios.post('/more/post', {
+//   a: 1
+// }, {
+//   auth: {
+//     username: 'lch',
+//     password: '123456'
+//   }
+// }).then(res => {
+//   console.log(res)
+// })
+
+
+axios.get('/more/304').then(res => {
+  console.log(res)
+}).catch((e) => {
+  console.log(e.message)
+})
+
+axios.get('/more/304', {
+  validateStatus(status) {
+    return status >= 200 && status < 400
   }
 }).then(res => {
   console.log(res)
+}).catch((e) => {
+  console.log(e.message)
 })
