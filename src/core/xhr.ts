@@ -125,7 +125,12 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
         cancelToken.promise.then(reason => {
           request.abort()
           reject(reason)
-        })
+        }).catch(
+          /* istanbul ignore next */ 
+          () => {
+            // do nothing
+          }
+        )
       }
     }
 
