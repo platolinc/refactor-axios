@@ -72,6 +72,9 @@
     "collectCoverageFrom": [
       "src/*.{js,ts}",
       "src/**/*.{js,ts}"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/boot.ts"
     ]
   },
   "prettier": {
@@ -89,6 +92,7 @@
     "@types/body-parser": "^1.19.5",
     "@types/cookie-parser": "^1.4.7",
     "@types/express": "^4.17.21",
+    "@types/jasmine-ajax": "^3.3.5",
     "@types/jest": "^24.0.13",
     "@types/node": "^10.11.0",
     "@types/nprogress": "0.0.29",
@@ -104,9 +108,12 @@
     "cookie-parser": "^1.4.6",
     "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
     "cz-conventional-changelog": "^2.1.0",
     "express": "^4.16.4",
     "husky": "^1.0.1",
+    "jasmine-ajax": "^4.0.0",
+    "jasmine-core": "^3.99.1",
     "jest": "^24.8.0",
     "jest-config": "^24.8.0",
     "lint-staged": "^8.0.0",
@@ -125,6 +132,7 @@
     "rollup-plugin-typescript2": "^0.18.0",
     "semantic-release": "^15.9.16",
     "shelljs": "^0.8.3",
+    "style-loader": "^0.23.1",
     "travis-deploy-once": "^5.0.9",
     "ts-jest": "^24.0.2",
     "ts-loader": "^5.3.3",
@@ -137,8 +145,6 @@
     "typescript": "^3.4.5",
     "webpack": "^4.28.4",
     "webpack-dev-middleware": "^3.5.0",
-    "webpack-hot-middleware": "^2.24.3",
-    "css-loader": "^2.1.1",
-    "style-loader": "^0.23.1"
+    "webpack-hot-middleware": "^2.24.3"
   }
 }
